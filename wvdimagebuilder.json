@@ -7,13 +7,7 @@
         "CreatedBy": "DavidH",
         "OperatingSystem": "Windows10",
         "Version": "1.0.2"
-             },
-    "identity":{
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordwvdtemplates/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSUSFSAdmin": {}
-      }
-    },			 
+             },	 
     "properties": {
         "source": {
             "type": "PlatformImage",
