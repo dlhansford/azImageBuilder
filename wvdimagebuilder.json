@@ -22,7 +22,7 @@
             { 
                 "type": "PowerShell", 
                 "name": "CopyArtifacts",
-                "scriptUri": "https://sandboxstoragesthcntl.blob.core.windows.net/wvdtemplatefiles/CopyArtifactsFolder.ps1"
+                "scriptUri": "https://raw.githubusercontent.com/dlhansford/azImageBuilder/master/CopyArtifactsFolder.ps1"
             }
         ],
 
