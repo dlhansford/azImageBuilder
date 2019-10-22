@@ -34,7 +34,7 @@
         "distribute":
         [
         {
-            "type": "SharedImage",
+            "type": "ManagedImage",
             "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
             "location": "<region>",
             "runOutputName": "<runOutputName>",
