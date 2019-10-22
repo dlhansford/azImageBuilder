@@ -21,10 +21,7 @@
         "customize": [
             { 
                 "type": "PowerShell", 
-                "name": "",
-                "inline": [
-                    "mkdir C:\\Artifacts"
-                ],
+                "name": "CopyArtifacts",
                 "scriptUri": "https://sandboxstoragesthcntl.blob.core.windows.net/wvdtemplatefiles/CopyArtifactsFolder.ps1"
             }
         ],
