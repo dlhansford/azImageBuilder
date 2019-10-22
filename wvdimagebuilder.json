@@ -4,9 +4,7 @@
     "location": "<region>", 
     "dependsOn": [],
     "tags": {
-        "CreatedBy": "DavidH",
-        "OperatingSystem": "Windows10",
-        "Version": "1.0.2"
+        "imagebuilderTemplate": "Windows10"
     },			 
     "properties": {
 
