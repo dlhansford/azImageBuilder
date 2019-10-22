@@ -1,18 +1,12 @@
 { 
     "type": "Microsoft.VirtualMachineImages/imageTemplates", 
     "apiVersion": "2019-05-01-preview", 
-    "location": "WestUS", 
+    "location": "<region>", 
     "dependsOn": [],
     "tags": {
         "CreatedBy": "DavidH",
         "OperatingSystem": "Windows10",
         "Version": "1.0.2"
-             },
-    "identity":{
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordwvdtemplates/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MSUSFSAdmin": {}
-      }
     },			 
     "properties": {
         "source": {
@@ -36,9 +30,9 @@
         ],
         "distribute": {
             "type": "ManagedImage",
-            "imageId": "/subscriptions/6f181101-2469-4ca2-95e8-5332ea49e2b9/resourceGroups/hansfordwvdtemplates/providers/Microsoft.Compute/images/WVDBaseImage01",
-            "location": "WestUS",
-            "runOutputName": "WVDBaseImage",
+            "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
+            "location": "<region>",
+            "runOutputName": "<runOutputName>",
             "artifactTags": {
                 "source": "azureVMImageBuilder",
                 "baseosimg": "Windows-10"
