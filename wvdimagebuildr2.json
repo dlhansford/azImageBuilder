@@ -1,0 +1,47 @@
+{
+    "type": "Microsoft.VirtualMachineImages/imageTemplates",
+    "apiVersion": "2019-05-01-preview",
+    "location": "<region>",
+    "dependsOn": [],
+    "tags": {
+        "CreatedBy": "DavidH",
+        "OperatingSystem": "Windows10",
+        "Version": "1.0.2"
+            },
+
+    "properties": {
+
+        "buildTimeoutInMinutes" : 100,
+        
+        "source": {
+            "type": "PlatformImage",
+            "publisher": "microsoftwindowsdesktop",
+            "offer": "office-365",
+            "sku": "rs5-evd-o365pp",
+            "version": "17763.737.1909062324"
+            
+        },
+        "customize": [
+            { 
+                "type": "PowerShell", 
+                "name": "",
+                "inline": [
+                    "mkdir C:\\Artifacts"
+                ],
+                "scriptUri": "https://sandboxstoragesthcntl.blob.core.windows.net/wvdtemplatefiles/CopyArtifactsFolder.ps1"
+            }
+        ],
+        "distribute": 
+            [
+                {   "type":"ManagedImage",
+                    "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/images/<imageName>",
+                    "location": "<region>",
+                    "runOutputName": "<runOutputName>",
+                    "artifactTags": {
+                        "source": "azureVMImageBuilder",
+                        "baseosimg": "Windows-10"
+                    }
+                }
+            ]
+        }
+    }
